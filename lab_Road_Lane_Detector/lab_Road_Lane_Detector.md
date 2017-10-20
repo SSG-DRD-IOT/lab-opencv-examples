@@ -1,5 +1,5 @@
 
-# Computer Vision: Detecting Lane Lines for Autonomous Vehicles
+# Computer Vision: Detecting Lane Lines
 ***
 
 ## Objective
