@@ -1,0 +1,14 @@
+[Unit]
+Description=Jupyter execution on startup
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/jupyter-notebook --config=/home/*/.jupyter/jupyter_notebook_config.py
+User=root
+Restart=always
+KillSignal=SIGINT
+
+[Install]
+WantedBy=multi-user.target
+Alias=jupyter.service
