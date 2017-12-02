@@ -4,7 +4,7 @@ After=network.target
 
 [Service]
 Type=simple
-ExecStart=/usr/local/bin/jupyter-notebook --allow-root --config=/home/*/.jupyter/jupyter_notebook_config.py
+ExecStart=/usr/local/bin/jupyter-notebook --allow-root --config=/home/nuc-user/.jupyter/jupyter_notebook_config.py
 User=root
 Restart=always
 KillSignal=SIGINT
