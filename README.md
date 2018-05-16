@@ -1,37 +1,24 @@
-## Welcome to GitHub Pages
+## OpenCV Examples 
 
-You can use the [editor on GitHub](https://github.com/SSG-DRD-IOT/lab-opencv-examples/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+At this part of the excercises for Industrial IoT, we will try to cover the basic principles of visual computing using OpenCV, and some practices to use OpenCV Python library with Python Notebooks.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Many times instead of raw presentations, better to start experiments directly hands on and learn.
 
-### Markdown
+As per Industrial IoT Workshops, UP2 boards are already Jupyter notebook servers, so you need to connect to UP2 board with its IP address from your browser:
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+http:\\<up2_board_ip_address>:8888
 
-```markdown
-Syntax highlighted code block
+When prompted as below image, write **upsquared** for password.
 
-# Header 1
-## Header 2
-### Header 3
+And navigate to: /home/upsquared/Desktop/Lab\ Answers/lab-opencv-examples
 
-- Bulleted
-- List
+Your image might be out dated so clone this repository to your choice of folder after connecting with ssh.
 
-1. Numbered
-2. List
+`shell
+$ git clone 
+`
 
-**Bold** and _Italic_ and `Code` text
+Now, let's follow below examples to learn more about visual computing.
 
-[Link](url) and ![Image](src)
-```
+### Lab 1
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/SSG-DRD-IOT/lab-opencv-examples/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
