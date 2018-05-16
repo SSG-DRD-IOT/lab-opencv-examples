@@ -5,20 +5,47 @@ At this part of the excercises for Industrial IoT, we will try to cover the basi
 Many times instead of raw presentations, better to start experiments directly hands on and learn.
 
 As per Industrial IoT Workshops, UP2 boards are already Jupyter notebook servers, so you need to connect to UP2 board with its IP address from your browser:
-
+```
 http:\\<up2_board_ip_address>:8888
-
+```
 When prompted as below image, write **upsquared** for password.
 
-And navigate to: /home/upsquared/Desktop/Lab\ Answers/lab-opencv-examples
+And navigate to: ```/home/upsquared/Desktop/Lab\ Answers/lab-opencv-examples```
 
 Your image might be out dated so clone this repository to your choice of folder after connecting with ssh.
 
-`shell
+```bash
 $ git clone 
-`
+```
 
 Now, let's follow below examples to learn more about visual computing.
 
-### Lab 1
+### Lab 0 - Installing 
+
+At this step, we are trying to install required libraries.
+
+### Lab 1 - OpenCV Basics
+
+At this step, we try to show basics of using OpenCV Python library
+
+### Lab 2 - Edge Detection
+
+At this lab, we try to show how edges detected with OpenCV Python library
+
+### Lab 3 - Face Detection 
+
+At this lab, we try to show the face detection using OpenCV Python Library
+
+### Lab 4 - Object Detection with Tensorflow
+
+At this lab, we go into Deep Learning part and how to utilize Tensorflow for object detection
+
+### Lab 5 - Realtime Object Detection with Tensorflow
+
+At this time, we write a script for realtime object detection using Tensorflow
+
+### Lab 6 - Realtime Object Detection with Caffe Framework
+
+At this time, we write a script for realtime object detection using Caffe
+
 
