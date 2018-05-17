@@ -24,17 +24,31 @@ Now, let's follow below examples to learn more about visual computing with OpenC
 
 At this step, we are trying to install required libraries.
 
+See IPython Notebook: [Install OpenCV Versions](https://github.com/SSG-DRD-IOT/lab-opencv-examples/blob/milano-workshop/Install%20OpenCV%20Versions.ipynb)
+
 ### Lab 1 - OpenCV Basics
 
 At this step, we try to show basics of using OpenCV Python library
+
+See IPython Notebook: [OpenCV Basics](https://github.com/SSG-DRD-IOT/lab-opencv-examples/blob/milano-workshop/OpenCV_Basics.ipynb)
 
 ### Lab 2 - Edge Detection
 
 At this lab, we try to show how edges detected with OpenCV Python library
 
+See IPython Notebook: [OpenCV Edge Detection](https://github.com/SSG-DRD-IOT/lab-opencv-examples/blob/milano-workshop/OpenCV%20Edge%20Detection.ipynb)
+
 ### Lab 3 - Face Detection 
 
-At this lab, we try to show the face detection using OpenCV Python Library
+At this lab, we try to show the face detection using OpenCV Python library
+
+See IPython Notebook: [OpenCV Face Detection](https://github.com/SSG-DRD-IOT/lab-opencv-examples/blob/milano-workshop/OpenCV%20Face%20Detection.ipynb)
+
+### Lab 4 - Road Lane Detection
+
+At this lab, we try to cover a common problem for autonomous driving and try to teach how OpenCV helps over lane detection on the road.
+
+See sub folder for [Lane Detection](https://github.com/SSG-DRD-IOT/lab-opencv-examples/tree/milano-workshop/Road_Lane_Detection) and continue tutorial from there.
 
 ### Lab 4 - Object Detection with Tensorflow
 
@@ -47,5 +61,4 @@ At this time, we write a script for realtime object detection using Tensorflow
 ### Lab 6 - Realtime Object Detection with Caffe Framework
 
 At this time, we write a script for realtime object detection using Caffe
-
 
