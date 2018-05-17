@@ -15,10 +15,10 @@ And navigate to: ```/home/upsquared/Desktop/Lab\ Answers/lab-opencv-examples```
 Your image might be out dated so clone this repository to your choice of folder after connecting with ssh.
 
 ```bash
-$ git clone 
+$ git clone https://github.com/SSG-DRD-IOT/lab-opencv-examples.git --branch milano-workshop
 ```
 
-Now, let's follow below examples to learn more about visual computing.
+Now, let's follow below examples to learn more about visual computing with OpenCV.
 
 ### Lab 0 - Installing 
 
