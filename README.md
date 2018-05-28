@@ -50,15 +50,14 @@ At this lab, we try to cover a common problem for autonomous driving and try to 
 
 See sub folder for [Lane Detection](https://github.com/SSG-DRD-IOT/lab-opencv-examples/tree/milano-workshop/Road_Lane_Detection) and continue tutorial from there.
 
-### Lab 4 - Object Detection with Tensorflow
+### Lab 5 - Object Detection using DNN (Caffe, Tensorflow) 
 
-At this lab, we go into Deep Learning part and how to utilize Tensorflow for object detection
+At this lab, we will use existing caffe and tensorflow neural network models to predict or detect objects inside images.
 
-### Lab 5 - Realtime Object Detection with Tensorflow
+- [Caffe Framework Example](https://github.com/SSG-DRD-IOT/lab-opencv-examples/blob/milano-workshop/OpenCV_Object_Detection/OpenCV%20and%20Deep%20Neural%20Networks%20for%20Object%20Detection%20-%20Caffe.ipynb)
 
-At this time, we write a script for realtime object detection using Tensorflow
+- [Tensor Framework Example]:(https://github.com/SSG-DRD-IOT/lab-opencv-examples/blob/milano-workshop/OpenCV_Object_Detection/OpenCV%20and%20Deep%20Neural%20Networks%20for%20Object%20Detection%20-%20Tensorflow.ipynb) 
 
-### Lab 6 - Realtime Object Detection with Caffe Framework
+### Lab 6 - Realtime Object Detection with Tensorflow
 
-At this time, we write a script for realtime object detection using Caffe
-
+At this section, we go one more step to use previously learned skills to detect objects in images for real time detection. Therefore, we utilize Tensorflow for realtime object detection.
