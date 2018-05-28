@@ -56,8 +56,10 @@ At this lab, we will use existing caffe and tensorflow neural network models to 
 
 - [Caffe Framework Example](https://github.com/SSG-DRD-IOT/lab-opencv-examples/blob/milano-workshop/OpenCV_Object_Detection/OpenCV%20and%20Deep%20Neural%20Networks%20for%20Object%20Detection%20-%20Caffe.ipynb)
 
-- [Tensor Framework Example]:(https://github.com/SSG-DRD-IOT/lab-opencv-examples/blob/milano-workshop/OpenCV_Object_Detection/OpenCV%20and%20Deep%20Neural%20Networks%20for%20Object%20Detection%20-%20Tensorflow.ipynb) 
+- [Tensor Framework Example](https://github.com/SSG-DRD-IOT/lab-opencv-examples/blob/milano-workshop/OpenCV_Object_Detection/OpenCV%20and%20Deep%20Neural%20Networks%20for%20Object%20Detection%20-%20Tensorflow.ipynb) 
 
-### Lab 6 - Realtime Object Detection with Tensorflow
+### Lab 6 - Realtime Object Detection with Tensorflow and Caffe
 
-At this section, we go one more step to use previously learned skills to detect objects in images for real time detection. Therefore, we utilize Tensorflow for realtime object detection.
+At this section, we go one more step to use previously learned skills to detect objects in images for real time detection. Therefore, we utilize Tensorflow and Caffe for realtime object detection.
+
+[Real Time Object Detection with Caffe and Tensorflow](https://github.com/SSG-DRD-IOT/lab-opencv-examples/tree/milano-workshop/OpenCV_Object_Detection/real_time_object_detection)
