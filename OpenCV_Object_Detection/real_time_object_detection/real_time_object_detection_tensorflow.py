@@ -8,7 +8,7 @@ current_process = psutil.Process(os.getpid())
 
 confidence = 0.6
 
-video_path = '../resources/motorcycle_6098_shortened_960x540.mp4'
+video_path = '../resources/bus_station_6094_960x540.mp4'
 
 # coco labels
 # there are 183 labels, all can be find in models/mscoco_labels.txt, below code parses labels to reuse them

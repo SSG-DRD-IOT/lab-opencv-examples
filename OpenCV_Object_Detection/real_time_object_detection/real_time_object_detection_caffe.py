@@ -7,7 +7,7 @@ current_process = psutil.Process(os.getpid())
 
 confidence = 0.6
 
-video_path = '../resources/motorcycle_6098_shortened_960x540.mp4'
+video_path = '../resources/bus_station_6094_960x540.mp4'
 
 #caffe model labels for objects are predefined for MobileNetSSD caffe model and protbuf
 labels = ("background", "aeroplane", "bicycle",
