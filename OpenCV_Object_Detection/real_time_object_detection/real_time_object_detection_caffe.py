@@ -3,9 +3,10 @@ from imutils.video import FPS
 import psutil
 import os
 
+# Get process id of this process when started to retrieve cpu allocation etc.
 current_process = psutil.Process(os.getpid())
 
-confidence = 0.6
+
 
 video_path = '../resources/bus_station_6094_960x540.mp4'
 
@@ -41,23 +42,40 @@ label_colors = [[ 70.03036239,  53.39948712, 221.96066983],
                    [ 83.84690577, 178.29185705, 128.78807612],
                    [195.2857407 , 247.73377045, 175.55730603]]
 
-caffe_model = '../models/MobileNetSSD_deploy.caffemodel'
+# Previously trained neural net, which defines the neural network structure
 caffe_proto = '../models/MobileNetSSD_deploy.prototxt'
 
+# This is the binary for the neural net, which has the weight information.
+caffe_model = '../models/MobileNetSSD_deploy.caffemodel'
+
+
+# This is the confidence level, where an object detected by neural network.
+confidence = 0.6
+
+# readNetFromCaffe: https://docs.opencv.org/trunk/d6/d0f/group__dnn.html
 cf_net = cv.dnn.readNetFromCaffe(caffe_proto, caffe_model)
 
+# open offline video source
 cap = cv.VideoCapture(video_path)
 
-fps = FPS().start()
-# Process inputs
-while True:
+# open video from camera
+# cap = cv.VideoCapture(0)
 
+# use FPS to calculate processes frames per second
+# https://github.com/jrosebr1/imutils/blob/master/imutils/video/fps.py
+
+fps = FPS().start()
+
+# Start loop to read frames from source
+while True:
+    # read frame from capture
     has_frame, frame = cap.read()
 
+    # if video ended finish
     if not has_frame:
         break
 
-    # First we get image size
+    # Get original frame size
     orig_rows = frame.shape[0]
     orig_cols = frame.shape[1]
 
@@ -66,6 +84,7 @@ while True:
 
     resized_frame = cv.resize(frame, (rows, cols))
 
+    # Caffe model expects images in 300x300 size
     blob = cv.dnn.blobFromImage(resized_frame, 0.00784, (rows, cols), (127.5, 127.5, 127.5), swapRB=True, crop=False)
 
     cf_net.setInput(blob)
@@ -104,7 +123,8 @@ while True:
             cv.putText(frame, label_text, (int(left), int(top)), cv.FONT_HERSHEY_SIMPLEX, 0.5, label_colors[label_index], 2)
             cv.rectangle(frame, (int(left), int(top)), (int(right), int(bottom)), label_colors[label_index], thickness=2)
 
-    cv.putText(frame, 'CPU% : {}'.format(current_process.cpu_times()[0]), (0, 15), cv.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 255), 2)
+    cv.putText(frame, 'CPU Count: {} - CPU% : {}'.format(os.cpu_count(), current_process.cpu_percent()), (0, 15), cv.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 255), 2)
+
     cv.imshow('OpenCV and Caffe DNN', frame)
 
     if cv.waitKey(1) & 0xFF == ord('q'):

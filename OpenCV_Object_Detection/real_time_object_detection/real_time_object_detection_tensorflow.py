@@ -14,6 +14,7 @@ video_path = '../resources/bus_station_6094_960x540.mp4'
 # there are 183 labels, all can be find in models/mscoco_labels.txt, below code parses labels to reuse them
 tf_labels_file = '../models/mscoco_labels.txt'
 
+# read labels
 labels = list()
 
 with open(tf_labels_file) as f:
@@ -28,10 +29,17 @@ label_colors = np.random.uniform(0, 255, (len(labels), 3))
 tf_model_file = '../models/frozen_inference_graph.pb'
 tf_config_file = '../models/ssd_mobilenet_v1_coco_2017_11_17.pbtxt'
 
-
+# Load Tensorflow models
 tf_net = cv.dnn.readNetFromTensorflow(tf_model_file, tf_config_file)
 
-cap = cv.VideoCapture(video_path)
+# open offline video source
+#cap = cv.VideoCapture(video_path)
+
+# open video from camera
+# cap = cv.VideoCapture(0)
+
+# use FPS to calculate processes frames per second
+# https://github.com/jrosebr1/imutils/blob/master/imutils/video/fps.py
 
 fps = FPS().start()
 
@@ -71,7 +79,7 @@ while True:
             cv.putText(frame, label_text, (int(left), int(top)), cv.FONT_HERSHEY_SIMPLEX, 0.5, label_colors[label_index], 2)
             cv.rectangle(frame, (int(left), int(top)), (int(right), int(bottom)), label_colors[label_index], thickness=3)
 
-    cv.putText(frame, 'CPU% : {}'.format(current_process.cpu_times()[0]), (0, 15), cv.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 255), 2)
+    cv.putText(frame, 'CPU Count: {} - CPU% : {}'.format(os.cpu_count(), current_process.cpu_percent()), (0, 15), cv.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 255), 2)
     cv.imshow('OpenCV and Tensorflow DNN', frame)
 
     if cv.waitKey(1) & 0xFF == ord('q'):
