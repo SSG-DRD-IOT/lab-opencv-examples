@@ -33,7 +33,7 @@ tf_config_file = '../models/ssd_mobilenet_v1_coco_2017_11_17.pbtxt'
 tf_net = cv.dnn.readNetFromTensorflow(tf_model_file, tf_config_file)
 
 # open offline video source
-#cap = cv.VideoCapture(video_path)
+cap = cv.VideoCapture(video_path)
 
 # open video from camera
 # cap = cv.VideoCapture(0)
@@ -79,7 +79,7 @@ while True:
             cv.putText(frame, label_text, (int(left), int(top)), cv.FONT_HERSHEY_SIMPLEX, 0.5, label_colors[label_index], 2)
             cv.rectangle(frame, (int(left), int(top)), (int(right), int(bottom)), label_colors[label_index], thickness=3)
 
-    cv.putText(frame, 'CPU Count: {} - CPU% : {}'.format(os.cpu_count(), current_process.cpu_percent()), (0, 15), cv.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 255), 2)
+    cv.putText(frame, 'CPU Count: {} - CPU% : {}'.format(psutil.cpu_count(), current_process.cpu_percent()), (0, 15), cv.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 255), 2)
     cv.imshow('OpenCV and Tensorflow DNN', frame)
 
     if cv.waitKey(1) & 0xFF == ord('q'):

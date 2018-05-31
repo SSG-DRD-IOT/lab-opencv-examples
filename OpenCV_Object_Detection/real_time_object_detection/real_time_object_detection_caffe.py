@@ -123,7 +123,7 @@ while True:
             cv.putText(frame, label_text, (int(left), int(top)), cv.FONT_HERSHEY_SIMPLEX, 0.5, label_colors[label_index], 2)
             cv.rectangle(frame, (int(left), int(top)), (int(right), int(bottom)), label_colors[label_index], thickness=2)
 
-    cv.putText(frame, 'CPU Count: {} - CPU% : {}'.format(os.cpu_count(), current_process.cpu_percent()), (0, 15), cv.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 255), 2)
+    cv.putText(frame, 'CPU Count: {} - CPU% : {}'.format(psutil.cpu_count(), current_process.cpu_percent()), (0, 15), cv.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 255), 2)
 
     cv.imshow('OpenCV and Caffe DNN', frame)
 
