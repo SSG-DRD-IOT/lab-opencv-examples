@@ -8,7 +8,7 @@ Your image might be out dated so clone this repository to your choice of folder 
 
 ```bash
 $ ssh upsquared@<up2_board_ip_address>
-$ mkdir /home/upsquared/cv-workshop && cd /home/upsquared/cv-workshop
+$ mkdir /home/upsquared/workshop && cd /home/upsquared/workshop
 $ git clone https://github.com/SSG-DRD-IOT/lab-opencv-examples.git --branch milano-workshop
 ```
 
@@ -18,7 +18,7 @@ http:\\<up2_board_ip_address>:8888
 ```
 When prompted as below image, write **upsquared** for password.
 
-And navigate to: ```/home/upsquared/cv-workshop/lab-opencv-examples```
+And navigate to: ```/home/upsquared/workshop/lab-opencv-examples```
 
 Now, let's follow below examples to learn more about visual computing with OpenCV.
 
