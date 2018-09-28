@@ -8,8 +8,7 @@ Your image might be out dated so clone this repository to your choice of folder 
 
 ```bash
 $ ssh upsquared@<up2_board_ip_address>
-$ mkdir /home/upsquared/workshop && cd /home/upsquared/workshop
-$ git clone https://github.com/SSG-DRD-IOT/lab-opencv-examples.git --branch milano-workshop
+$ cd /home/upsquared/workshop
 ```
 
 As per Industrial IoT Workshops, UP2 boards are already Jupyter notebook servers, so you need to connect to UP2 board with its IP address from your browser:
@@ -18,7 +17,7 @@ http:\\<up2_board_ip_address>:8888
 ```
 When prompted as below image, write **upsquared** for password.
 
-And navigate to: ```/home/upsquared/workshop/lab-opencv-examples```
+And navigate to: ```/home/upsquared/workshop/computer-vision```
 
 Now, let's follow below examples to learn more about visual computing with OpenCV.
 
@@ -60,8 +59,14 @@ At this lab, we will use existing caffe and tensorflow neural network models to 
 
 - [Tensor Framework Example](https://github.com/SSG-DRD-IOT/lab-opencv-examples/blob/milano-workshop/OpenCV_Object_Detection/OpenCV%20and%20Deep%20Neural%20Networks%20for%20Object%20Detection%20-%20Tensorflow.ipynb) 
 
-### Lab 6 - Realtime Object Detection with Tensorflow and Caffe
+### Lab 6 - Realtime Object Detection with Tensorflow and Caffe - OpenCV
 
-At this section, we go one more step to use previously learned skills to detect objects in images for real time detection. Therefore, we utilize Tensorflow and Caffe for realtime object detection.
+At this section we aim to play with python scripts which works with Caffe and Tensorflow deep learning models using OpenCV inference interface. 
 
-[Real Time Object Detection with Caffe and Tensorflow](https://github.com/SSG-DRD-IOT/lab-opencv-examples/tree/milano-workshop/OpenCV_Object_Detection/real_time_object_detection)
+- [Follow the instructions for OpenCV examples](https://github.com/SSG-DRD-IOT/lab-opencv-examples/tree/milano-workshop/OpenCV_Object_Detection/real_time_object_detection)
+
+### Lab 7 - Realtime Object Detection with Intel(R) OpenVINO (TM)
+
+At this section you can go over the example python script to see how you can use OpenVINO for Deep Learning Computer Vision inference process.
+
+- [Follow the instructions for OpenVINO examples](https://github.com/SSG-DRD-IOT/lab-opencv-examples/edit/milano-workshop/OpenCV_Object_Detection/real_time_object_detection/)
